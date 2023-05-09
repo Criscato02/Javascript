@@ -5,6 +5,7 @@ function Libro(nombre, precio, año){
     this.disponibilidad = true //valor por defecto
     this.precioFinal = function(){
 
+    //CONDICIONAL
         let precioFinal = this.precio
         if(this.precio >= 20000){
             precioFinal = this.precio - ((this.precio/100) * 20)
@@ -25,10 +26,11 @@ const libro1 = new Libro("The hunger games", 20000, 2015);
 const libro2 = new Libro("Game of Thrones", 35000, 2020);
 const libro3 = new Libro("Piense y hágase rico", 17500, 2012);
 
-// //LLamando al metodo
+////LLamando al metodo
 // libro1.precioFinal()
 // libro2.precioFinal()
 // libro3.precioFinal()
+
 
 const Libros = [libro1, libro2, libro3];
 for (let libro of Libros) {
