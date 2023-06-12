@@ -1,5 +1,33 @@
 .container-cards{
     padding: 25px;
     text-align: center;
-    display:inline-block
+    display:flex;
+    height: 50px;
+    max-width: max-content;
+
+}
+.h1{
+    text-align: center;
+}
+
+.card-img-top{
+    max-height: 300px;
+    max-width: fit-content;
+}
+
+#carrito{
+    padding: 2rem;
+    max-width: fit-content;
+    display: inline-block;
+}
+
+#btnVaciarCarrito{
+    border: none;
+    background-color: red;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 18px;
+    color: black;
+    float: right
+    
 }
