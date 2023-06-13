@@ -1,15 +1,3 @@
-// ////Log in mediante prompt
-// let nombreUsuario = prompt("ingrese su nombre de usuario")
-// let contrasenia = Number(prompt("ingrese contraseña"))
-// let password = 12345
-
-// if (contrasenia === password){
-//     alert("Bienvenido a nuesta Tienda Virtual de Libros")
-// }else{
-//     alert("Usuario o Contraseña incorrectos");
-// }
-
-
 function Libro(nombre, precio, año,id){
     this.nombre = nombre
     this.precio = precio
@@ -58,7 +46,13 @@ for (let i = 0; i < boton.length; i++) {
     });
 }
 
+//Trabajando en barra de busqueda
+const formulario = document.querySelector("formulario")
+console.log(formulario)
 
+formulario.addEventListener("click", () => {
+    const formulario = document.find((libro) => libro.id ===prodID);
+})
 
 
 

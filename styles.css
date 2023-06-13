@@ -31,3 +31,15 @@
     float: right
     
 }
+.formulario{
+    display: flex;
+    border: 18px;
+    padding-left: 20px;
+    padding-bottom: 20PX;
+    padding-top: 20PX;
+}
+#buscar{
+    justify-content: center;
+    max-width: 1000px;
+    max-height: 2rem;
+}

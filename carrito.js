@@ -12,6 +12,7 @@ carrito.forEach((libro) => {
     <button id=${libro.id} class="btn btn-primary delete">Eliminar</button>
     `
 })
+
 div.innerHTML = carritosHTML 
 
 
@@ -30,12 +31,25 @@ function vaciarCarrito() {
   alert("No hay elementos en tu carrito");
 }
 ////reduce
+
 const TotalCompra = carrito.reduce ((accum, carrito) =>{
     return accum + carrito.precio
 },0)
 console.log(TotalCompra)
+carritosHTML.innerHTML = `Total a pagar: ${TotalCompra} $`;
 
-//terminar
-const eliminarProducto = document.querySelector("btn btn-primary delete")
-    eliminarProducto.remove()
 
+
+// // por terminar variable Delete
+// const borrarProducto = document.querySelector(".btn btn-primary delete");
+// console.log(borrarProducto);
+
+
+// borrarProducto.addEventListener("click", () => {
+//   eliminarProducto(prodID);
+// });    
+
+//  const eliminarProducto = (prodID) =>{
+//     const borrar = carrito.find((libro) => libro.id === prodID);
+//     return carrito !== borrar;
+// }
