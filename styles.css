@@ -1,45 +1,197 @@
-.container-cards{
-    padding: 25px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #141C29;
+    padding-top: 80px;
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
-    display:flex;
-    height: 50px;
-    max-width: max-content;
+    margin: 30px 0px;
+}
+img {
+    width: 320px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:15%;
+    height: 70px;
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.scroll{
+    /* background-color: aliceblue; */
+    background-color: #5966e4;; 
+
+    box-shadow: .1rem .2rem .3rem #333;
+}
+.scroll img{
+    filter: invert(15%);
+}           
+.scroll h1{
+    color: #141C29;
+}
+.carrito{
+    filter: invert(100%);
+    width: 45px;
+    height: auto;
+    cursor: pointer;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+.contenedor>div{
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: #5966e4;
+    border-radius: 20px;
+}
+.contenedor>div:hover{
+    background-color: #7cec9d;
 
 }
-.h1{
-    text-align: center;
-}
 
-.card-img-top{
-    max-height: 300px;
-    max-width: fit-content;
+.informacion{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:15px;
 }
-
-#carrito{
-    padding: 2rem;
-    max-width: fit-content;
-    display: inline-block;
+.informacion>p:first-child{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 300;
 }
-
-#btnVaciarCarrito{
+.informacion .precio {
+    font-size: 20px;
+    font-weight: 500;
+}
+/* .informacion .precio span{
+    font-size: 17px;
+    font-weight: 300;
+} */
+.informacion button{
+    background-color: #263143;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
     border: none;
-    background-color: red;
+
+    font-size: 17px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.informacion button:hover{
+    background-color: #2D4263;
+}
+#contenedorCompra button{
+    z-index: 1;
+    background-color: #263143;
+    height: 45px;
+    width: 300px;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
+    font-weight: 300;
+}
+#contenedorCompra button:hover{
+    color: #000000;
+    background-color: white;
+}
+#carritoContainer::-webkit-scrollbar{
+    background-color: #FFFFFF;
     border-radius: 5px;
-    padding: 15px;
-    font-size: 18px;
-    color: black;
-    float: right
+    width: 7px;
+}
+#carritoContainer::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 3px;
+}
+.productosCompra{
+    z-index: 1;
+    font-size: 17px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 400px;
+    height: 30%;
+    overflow-y: auto;
+    margin-top: 40px;
+}
+.productosCompra div{
+    padding: 20px;
+    margin: 0px 45px;
+    width: auto;
+    border-bottom: 1px black dotted;
+    justify-content: space-between;
+}
+.informacionCompra{
+    width: 500px;
+    height: 500px;
+    background-color: #263143;
+    border-radius: 25px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    display: flex;
+    position: fixed;
+}
+.informacionCompra h2{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 35px;
+    width: 100%;
+    color: #7cec9d;
+    float: right;
     
 }
-.formulario{
-    display: flex;
-    border: 18px;
-    padding-left: 20px;
-    padding-bottom: 20PX;
-    padding-top: 20PX;
+.x{
+    padding-top: 15px;
+    padding-right: 30px;
+    font-size: 25px;
+    color: #7cec9d;
+    cursor: pointer;
+    float: right;
 }
-#buscar{
+#contenedorCompra{
     justify-content: center;
-    max-width: 1000px;
-    max-height: 2rem;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    background-color: grey;
+    flex-direction: column;
+    gap: 25px;
+}
+.informacionCompra p{
+    float: right;
+    margin-left: auto;
+}
+#carritoContainer{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: fit-content;
+    width: fit-content;
 }

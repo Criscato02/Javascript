@@ -4,210 +4,117 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <title>E-commerce proyecto Final</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
     />
-
-    <title>Pre-entrega 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <!-- ////barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand ml-3">Para gustos, Libros!</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarText"
-        aria-controls="navbarText"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <span class="navbar-text form-inline">
-          <a href="carrito.html">
-            <ion-icon name="cart-outline"></ion-icon>
-          </a>
-        </span>
-      </div>
-    </nav>
 
-    <form class="formulario">
-      <label for="fname">Buscas algo especial?</label><br />
-      <input type="text" id="buscar" name="fname" /><br />
-      <button id="searchButton">Buscar</button>
-    </form>
-    <!-- //productos -->
-    <h1>Tienda Virtual de Libros</h1>
-    <div>
-      <h2 class="col-lg-6 col-xm-12">Nuestos productos para ti!</h2>
-    </div>
-    <div class="container-cards">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <img
-                src="images/TheHungerGames.jpg"
-                class="card-img-top"
-                alt="The Hunger Games"
-              />
-              <h5 class="card-title">The Hunger Games</h5>
-              <button id="1" class="btn btn-primary cart">
-                Añadir al Carrito
-              </button>
-            </div>
-          </div>
+  <body>
+    <header id="header">
+      <h1>Tienda de Libros Online</h1>
+      <img
+        id="carritoImagen"
+        class="carrito"
+        src="images/carrito.png"
+        alt="carrito"
+      />
+    </header>
+    <div id="contenedor" class="contenedor">
+      <div>
+        <img src="images/TheHungerGames.jpg" alt="producto 1" />
+        <div class="informacion" id="1">
+          <p>The Hunger Games</p>
+          <p class="precio">$20,000</p>
+          <button class="agregarProducto">Comprar</button>
         </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <img
-                src="images/GameOfThrones.jpg"
-                class="card-img-top"
-                alt="GameOfThrones"
-              />
-              <h5 class="card-title">Game Of Thrones</h5>
-              <button id="2" class="btn btn-primary cart">
-                Añadir al Carrito
-              </button>
-            </div>
-          </div>
+      </div>
+      <div>
+        <img src="images/GameOfThrones.jpg" alt="producto 2" />
+        <div class="informacion" id="2">
+          <p>Game of Thrones</p>
+          <p class="precio">$35,000</p>
+          <button class="agregarProducto2">Comprar</button>
         </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <img
-                src="images/piense.jpg"
-                class="card-img-top"
-                alt="Piense y Hágase Rico"
-              />
-              <h5 class="card-title">Piense y Hágase Rico</h5>
-              <button id="3" class="btn btn-primary cart">
-                Añadir al Carrito
-              </button>
-            </div>
-          </div>
+      </div>
+      <div>
+        <img src="images/piense.jpg" alt="producto 3" />
+        <div class="informacion" id="3">
+          <p>Piense y Hágase Rico</p>
+          <p class="precio">$17,500</p>
+          <button class="agregarProducto3">Comprar</button>
         </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <img
-                src="images/la culpa.jpg"
-                class="card-img-top"
-                alt="La Culpa es de Vaca"
-              />
-              <h5 class="card-title">La Culpa es de Vaca</h5>
-              <button id="4" class="btn btn-primary cart">
-                Añadir al Carrito
-              </button>
-            </div>
-          </div>
+      </div>
+      <div>
+        <img src="images/la culpa.jpg" alt="producto 4" />
+        <div class="informacion" id="4">
+          <p>La Culpa es de la Vaca</p>
+          <p class="precio">$12,000</p>
+          <button class="agregarProducto4">Comprar</button>
         </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <img
-                src="images/un inmueble al año.avif"
-                class="card-img-top"
-                alt="Un Inueble al Año no hace daño"
-              />
-              <h5 class="card-title">Un Inueble al Año no hace daño</h5>
-              <button id="5" class="btn btn-primary cart">
-                Añadir al Carrito
-              </button>
-            </div>
-          </div>
+      </div>
+      <div>
+        <img src="images/un inmueble al año.avif" alt="producto 5" />
+        <div class="informacion" id="5">
+          <p>Un inmueble al año</p>
+          <p class="precio">$53,000</p>
+          <button class="agregarProducto5">Comprar</button>
         </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <img
-                src="images/dinero.webp"
-                class="card-img-top"
-                alt="Dinero: Domina el Juego"
-              />
-              <h5 class="card-title">Dinero: Domina el Juego</h5>
-              <button id="6" class="btn btn-primary cart">
-                Añadir al Carrito
-              </button>
-            </div>
-          </div>
+      </div>
+      <div>
+        <img src="images/dinero.webp" alt="producto 6" />
+        <div class="informacion" id="6">
+          <p>Dinero: Domina el Juego</p>
+          <p class="precio">$55,000</p>
+          <button class="agregarProducto6">Comprar</button>
         </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <img
-                src="images/cuentos hermanos.jpg"
-                class="card-img-top"
-                alt="Dinero: Cuentos de los hermanos Grinn"
-              />
-              <h5 class="card-title">Cuentos de los hermanos Grinn</h5>
-              <button id="7" class="btn btn-primary cart">
-                Añadir al Carrito
-              </button>
-            </div>
-          </div>
+      </div>
+      <div>
+        <img src="images/cuentos hermanos.jpg" alt="producto 7" />
+        <div class="informacion" id="7">
+          <p>Cuentos de los hermanos</p>
+          <p class="precio">$25,000</p>
+          <button class="agregarProducto7">Comprar</button>
         </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <img
-                src="images/la orden del fenix.jpg"
-                class="card-img-top"
-                alt="Harry Potter: La Orden del Fénix"
-              />
-              <h5 class="card-title">Harry Potter: La Orden del Fénix</h5>
-              <button id="8" class="btn btn-primary cart">
-                Añadir al Carrito
-              </button>
-            </div>
-          </div>
+      </div>
+      <div>
+        <img src="images/la orden del fenix.jpg" alt="producto 8" />
+        <div class="informacion" id="8">
+          <p>Harry Potter</p>
+          <p class="precio">$104,000</p>
+          <button class="agregarProducto8">Comprar</button>
         </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <img
-                src="images/cocina.jpg"
-                class="card-img-top"
-                alt="Harry Potter: La Orden del Fénix"
-              />
-              <h5 class="card-title">Diseño y Gestión de Cocinas</h5>
-              <button id="9" class="btn btn-primary cart">
-                Añadir al Carrito
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <img
-                src="images/divergente.jpg"
-                class="card-img-top"
-                alt="Divergente"
-              />
-              <h5 class="card-title">Divergente</h5>
-              <button id="10" class="btn btn-primary cart">
-                Añadir al Carrito
-              </button>
-            </div>
-          </div>
+      </div>
+      <div>
+        <img src="images/cocina.jpg" alt="producto 9" />
+        <div class="informacion" id="9">
+          <p>Gestión de Cocinas</p>
+          <p class="precio">$26,000</p>
+          <button class="agregarProducto9">Comprar</button>
         </div>
       </div>
     </div>
-    <script src="/app.js"></script>
-    <!-- <script src="/carrito.js"></script> -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
+    <div id="contenedorCompra">
+      <div class="informacionCompra" id="informacionCompra">
+        <h2>Mis compras</h2>
+        <p class="x" id="x">x</p>
+      </div>
+      <div class="productosCompra" id="carritoContainer"></div>
+      <div class="total" id="total"></div>
+      <button>Finalizar Compra</button>
+    </div>
+    <div id="carrito"></div>
+    <script src="app.js"></script>
   </body>
 </html>

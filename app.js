@@ -1,60 +1,127 @@
-function Libro(nombre, precio, año,id){
-    this.nombre = nombre
-    this.precio = precio
-    this.año = año
-    this.disponibilidad = true //valor por defecto
-    this.id = id
-}
-//Libros disponibles
-const libro1 = new Libro("The hunger games", 20000, 2015, "1"); 
-const libro2 = new Libro("Game of Thrones", 35000, 2020, "2");
-const libro3 = new Libro("Piense y hágase rico", 17500, 2012, "3");
-const libro4 = new Libro("La culpa es de la Vaca", 12000, 2005, "4");
-const libro5 = new Libro("Un inmueble al año no hace daño", 53000, 2018, "5");
-const libro6 = new Libro("Dinero: Domina el juego", 55000, 2016, "6");
-const libro7 = new Libro("Cuentos de los hermanos Grinn", 25000, 1995, "7");
-const libro8 = new Libro("Harry Potter: La Orden del Fénix", 104000, 2014, "8");
-const libro9 = new Libro("Cocina indrustrial", 26000, 2020, "9");
-const libro10 = new Libro("Divergente", 30000, 2017, "10");
+document.addEventListener("DOMContentLoaded", () => {
+    const informacionCompra = document.getElementById('informacionCompra');
+    const contenedorCompra = document.getElementById('contenedorCompra');
+    const productosCompra = document.querySelector(".productosCompra");
+    const contenedor = document.getElementById('contenedor');
+    const carrito = document.querySelector(".carrito");
+    const numero = document.getElementById("numeroElementos");
+    const total = document.getElementById('total');
+    const x = document.getElementById('x');
+  
+    const productos = [
+      { nombre: "The hunger games", precio: 20000, id: 1 },
+      { nombre: "Game of Thrones", precio: 35000, id: 2 },
+      { nombre: "Piense y hágase rico", precio: 17500, id: 3 },
+      { nombre: "La culpa es de la Vaca", precio: 12000, id: 4 },
+      { nombre: "Un inmueble al año no hace daño", precio: 53000, id: 5 },
+      { nombre: "Dinero: Domina el juego", precio: 55000, id: 6 },
+      { nombre: "Cuentos de los hermanos Grinn", precio: 25000, id: 7 },
+      { nombre: "Harry Potter: La Orden del Fénix", precio: 104000, id: 8 },
+      { nombre: "Cocina indrustrial", precio: 26000, id: 9 }
+    ];
+    const lista = [];
+  
+    const agregarProducto = document.querySelector(".agregarProducto");
+    const agregarProductoDos = document.querySelector(".agregarProducto2");
+    const agregarProductoTres = document.querySelector(".agregarProducto3");
+    const agregarProductoCuatro = document.querySelector(".agregarProducto4");
+    const agregarProductoCinco = document.querySelector(".agregarProducto5");
+    const agregarProductoSeis = document.querySelector(".agregarProducto6");
+    const agregarProductoSiete = document.querySelector(".agregarProducto7");
+    const agregarProductoOcho = document.querySelector(".agregarProducto8");
+    const agregarProductoNueve = document.querySelector(".agregarProducto9");
 
-//// Array
-const Libros = [libro1, libro2, libro3, libro4, libro5, libro6, libro7, libro8, libro9, libro10];
+    const agregarCarrito = (id) => {
+      const item = productos.filter((libro) => libro.id === id);
+      lista.push(item);
+      console.log(lista);
+      localStorage.setItem('carrito', JSON.stringify(lista));
+      mostrarCarrito();
+    };
+    
+    agregarProducto.addEventListener("click", (event) => {
+        const id = parseInt(event.target.parentNode.getAttribute("id"));
+        agregarCarrito(id);
+      });
+    agregarProductoDos.addEventListener("click", (event) => {
+        const id = parseInt(event.target.parentNode.getAttribute("id"));
+        agregarCarrito(id);
+      });
+    agregarProductoTres.addEventListener("click", (event) => {
+        const id = parseInt(event.target.parentNode.getAttribute("id"));
+        agregarCarrito(id);
+      });
+      agregarProductoCuatro.addEventListener("click", (event) => {
+        const id = parseInt(event.target.parentNode.getAttribute("id"));
+        agregarCarrito(id);
+      });
+      agregarProductoCinco.addEventListener("click", (event) => {
+        const id = parseInt(event.target.parentNode.getAttribute("id"));
+        agregarCarrito(id);
+      });
+      agregarProductoSeis.addEventListener("click", (event) => {
+        const id = parseInt(event.target.parentNode.getAttribute("id"));
+        agregarCarrito(id);
+      });
+      agregarProductoSiete.addEventListener("click", (event) => {
+        const id = parseInt(event.target.parentNode.getAttribute("id"));
+        agregarCarrito(id);
+      });
+      agregarProductoOcho.addEventListener("click", (event) => {
+        const id = parseInt(event.target.parentNode.getAttribute("id"));
+        agregarCarrito(id);
+      });
+      agregarProductoNueve.addEventListener("click", (event) => {
+        const id = parseInt(event.target.parentNode.getAttribute("id"));
+        agregarCarrito(id);
+      });
+     
 
-////Filter
-let busquedaPorPrecio = Libros.filter((libro) => libro.precio > 30000)
-console.log(busquedaPorPrecio)
-////Find
-let busquedaPorNombre = Libros.find((libro) => libro.nombre === "Un inmueble al año no hace daño")
-console.log (busquedaPorNombre)
-
-////Carrito
-const carrito =[]
-
-const agregarCarrito = (prodID) =>{
-    const item = Libros.find((libro) => libro.id ===prodID)
-    carrito.push(item)
-    console.log(carrito)
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-}
-
-const boton = document.querySelectorAll("button.cart")
-console.log(boton)
-
-for (let i = 0; i < boton.length; i++) {
-    boton[i].addEventListener("click", function() {
-        agregarCarrito(boton[i].id)
+    const obtenerIdProducto = () => {
+        const contenedorProducto = agregarProducto.closest("#informacion");
+        const id = contenedorProducto.getAttribute("id");
+        
+        return id;
+      };
+    
+    x.addEventListener("click", ()=>{
+    const contenedorCompra = document.getElementById('contenedorCompra');
+    contenedorCompra.style.display = 'none';
     });
-}
 
-//Trabajando en barra de busqueda
-const formulario = document.querySelector("formulario")
-console.log(formulario)
+    const carritoImagen = document.getElementById('carritoImagen');
+    carritoImagen.addEventListener('click', mostrarCarrito);
+    
+        function mostrarCarrito() {
+        const contenedorCompra = document.getElementById('contenedorCompra');
+        contenedorCompra.style.display = 'block';
+        productosCompra.innerHTML =""
+        
+        lista.forEach((producto) => {
+            const contenedorProducto = document.createElement('div');
+            contenedorProducto.innerHTML = `
+            <h3>Libro: ${productos.nombre}</h3>
+            <p>Precio: ${productos.precio}</p>
+            <button type="button" class="btn btn-danger btn-eliminar">Eliminar del carrito</button>
+            `
+            ;
+            productosCompra.appendChild(contenedorProducto);
+        });
+        }
+    const btnEliminar = contenedorCompra.querySelector('.btn-eliminar');
+        btnEliminar.addEventListener('click', () => {
+        eliminarProducto(productos.id);
+    });
 
-formulario.addEventListener("click", () => {
-    const formulario = document.find((libro) => libro.id ===prodID);
-})
+    const eliminarProducto = (id) => {
+        const index = lista.findIndex((producto) => productos.id === id);
+        if (index !== -1) {
+          lista.splice(index, 1);
+          mostrarCarrito();
+        }
+      };
+      
 
-
-
+    })
 
 
