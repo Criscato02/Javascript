@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const numero = document.getElementById("numeroElementos");
   const total = document.getElementById('total');
   const x = document.getElementById('x');
+  const productosNuevos = document.querySelector(".productosNuevos");
+
 
   const productos = [
     { nombre: "The hunger games", precio: 20000, id: 1 },
@@ -31,10 +33,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const agregarProductoOcho = document.querySelector(".agregarProducto8");
   const agregarProductoNueve = document.querySelector(".agregarProducto9");
 
+  fetch("./data.json")
+    .then((res) => res.json())
+    .then((data) => {
+      data.forEach((prod) => {
+        const li = document.createElement('li')
+        li.innerHTML = `
+        <h3>Libro: ${prod.nombre}</h3>
+        <p>Precio: ${prod.precio}</p>
+      `
+
+        productosNuevos.append(li)
+      })
+    })
+
   const agregarCarrito = (id) => {
     const item = productos.filter((libro) => libro.id === id);
     lista.push(item[0]);
-    console.log(lista);
     localStorage.setItem('carrito', JSON.stringify(lista));
     // mostrarCarrito();
   };
@@ -100,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // lista.forEach((producto) => {
     lista.forEach(function (producto) {
 
-      console.log(producto)
       const contenedorProducto = document.createElement('div');
       contenedorProducto.innerHTML = `
             <h3>Libro: ${producto.nombre}</h3>
@@ -126,8 +140,6 @@ document.addEventListener("DOMContentLoaded", () => {
       mostrarCarrito();
     }
   };
-
-
 })
 
 
