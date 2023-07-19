@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const div = document.createElement('div')
         div.innerHTML = `
         <img src="${prod.url}" alt="" />
-        <div class="informacion" id="8">
+        <div class="informacion" >
           <p>${prod.nombre}</p>
           <p class="precio">${prod.precio}</p>
           <button id="${prod.id}"class="agregarProducto">Comprar</button>
@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const item = productos.filter((libro) => libro.id === parseInt(id));
     lista.push(item[0]);
     localStorage.setItem('carrito', JSON.stringify(lista));
-    // mostrarCarrito();
   };
 
 
@@ -57,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
     contenedorCompra.style.display = 'block';
     productosCompra.innerHTML = ""
 
-    // lista.forEach((producto) => {
     lista.forEach(function (producto) {
 
       const contenedorProducto = document.createElement('div');
