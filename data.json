@@ -1,5 +1,11 @@
 [
-    {"nombre": "Libro 10", "precio": 40000 , "id": 10},
-    {"nombre": "Libro 11", "precio": 50000 , "id": 11},
-    {"nombre": "Libro 12", "precio": 60000 , "id": 12}
+    { "nombre": "The hunger games", "precio": 20000, "id": 1 , "url":"images/TheHungerGames.jpg"},
+    { "nombre": "Game of Thrones", "precio": 35000, "id": 2 , "url":"images/GameOfThrones.jpg"},
+    { "nombre": "Piense y hágase rico", "precio": 17500, "id": 3, "url":"images/piense.jpg" },
+    { "nombre": "La culpa es de la Vaca", "precio": 12000, "id": 4, "url":"images/la culpa.jpg" },
+    { "nombre": "Un inmueble al año", "precio": 53000, "id": 5 , "url":"images/un inmueble al año.avif"},
+    { "nombre": "Dinero: Domina el juego", "precio": 55000, "id": 6, "url":"images/dinero.webp" },
+    { "nombre": "Cuentos hermanos Grinn", "precio": 25000, "id": 7, "url":"images/cuentos hermanos.jpg" },
+    { "nombre": "Harry Potter: La Orden ", "precio": 104000, "id": 8 , "url":"images/la orden del fenix.jpg"},
+    { "nombre": "Cocina indrustrial", "precio": 26000, "id": 9 , "url":"images/cocina.jpg"}
 ]
