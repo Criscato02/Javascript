@@ -60,7 +60,7 @@ header{
   }
   
 .contenedor > div {
-    width: 30%;
+    flex: 0 0 calc(33.3333% - 40px);
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
     background-color: #5966e4;
     border-radius: 20px;
@@ -127,15 +127,13 @@ header{
     border-radius: 3px;
 }
 .productosCompra{
-    z-index: 1;
+    z-index: 1; 
     font-size: 17px;
     display: flex;
     position: relative;
     flex-direction: column;
     justify-content: flex-start;
-    width: 400px;
-    height: 30%;
-    overflow-y: auto;
+    overflow-y :scroll;
     margin-top: 40px;
 }
 .productosCompra div{
@@ -143,8 +141,9 @@ header{
     margin: 0px 45px;
     width: auto;
     border-bottom: 1px black dotted;
-    justify-content: space-between;
-}
+    justify-content: space-between; 
+ }
+
 .informacionCompra{
     width: 500px;
     height: 500px;
